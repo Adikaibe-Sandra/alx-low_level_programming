@@ -4,12 +4,9 @@
 /**
  * main - Entry point
  * Decription: 'This prints solution to 0-positive_or_negative.c'
- *
  * Return: Always (Success)
  */
-
 int main(void)
-
 {
 	int n;
 	srand(time(0));
