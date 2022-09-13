@@ -1,4 +1,4 @@
-#include "studio.h"
+#include "main.h"
 /**
  * main - Entry point
  * Description - 'Prints the alphabet, in lowercase, followed by a new line'
