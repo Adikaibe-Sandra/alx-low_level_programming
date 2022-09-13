@@ -1,1 +1,2 @@
-The prototype of the function _putchar should be included in your header file called main.h
+#ifindef main_h_included
+#define main_h_included
