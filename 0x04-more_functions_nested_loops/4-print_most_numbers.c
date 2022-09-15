@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -18,5 +19,5 @@ void print_most_numbers(void)
 		}
 		_putchar(a);
 	}
-	_putchar('\n');
+	_putchar(10);
 }
