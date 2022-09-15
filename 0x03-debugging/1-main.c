@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Description: Causes an infinite loop
+ * Description: 'Causes an infinite loop'
  * Return: 0
  */
 int main(void)
