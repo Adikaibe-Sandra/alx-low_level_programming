@@ -9,15 +9,17 @@
 
 void print_most_numbers(void)
 {
-	int n;
+	int a;
 
-	for (n = 48; n < 58; n++)
+	for (a = 48; a < 58; a++)
 	{
-		if ((n == 50) || (n == 52))
+		if (a != 50)
 		{
-			continue;
+			if (a != 52)
+			{
+				_putchar(a);
+			}
 		}
-		_putchar(n);
 	}
-	_putchar(10);
+	_putchar('\n');
 }
