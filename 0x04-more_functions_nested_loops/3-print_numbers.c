@@ -1,19 +1,18 @@
-#include <studio.h>
-#include "main.h"
+nclude "main.h"
 
 /**
  * print_numbers - prints the numbers, from 0 to 9
  *
- * Return: Always 0.
+ * Return: Always 0(success)
  */
 
 void print_numbers(void)
 {
-	int a;
+	int n;
 
-	for (a = 48; a < 58; a++)
+	for (n = 48; n < 58; n++)
 	{
-		_putchar(a);
+		_putchar(n);
 	}
 	_putchar('\n');
 }
