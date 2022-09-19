@@ -3,9 +3,12 @@
 
 /**
  * _puts - a function that prints a string
- * @str: string to print
- * Return: string
+ * @str: string input
+ *
+ * Description: prints a string
+ * on success: returns no error
  */
+
 void _puts(char *str)
 {
 	int i = 0;
@@ -15,5 +18,5 @@ void _puts(char *str)
 		putchar(*(str + i));
 		i++;
 	}
-	_putchar(10);
+	putchar(10);
 }
