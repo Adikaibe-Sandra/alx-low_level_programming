@@ -5,18 +5,17 @@
  * @dest: destination
  * @src: source
  *
- * Return: string
+ * Return: d
  */
 char *_strcpy(char *dest, char *src)
 {
-	int inc 0;
+	char *d = dest;
 
-	while (*(src + inc) != '\0')
+	for (; *src != '\0'; src++)
 	{
-		*(dest + inc) = *(src + inc);
-		inc++;
+		*dest = *src;
+		dest++;
 	}
-	*(dest + inc) = '\0';
-
-	return (dest);
+	*dest = *src;
+	return (d);
 }
