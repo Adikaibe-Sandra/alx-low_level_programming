@@ -9,22 +9,37 @@ include < stdio.h >
 
 char *rot13(char *s)
 {
-	int i = 0, i2 = 0;
-	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char alpha2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int index1, index2;
 
-	while (*(s + i) != 0)
+	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
+		'G', 'H', 'I', 'J', 'K', 'L',
+		'M', 'N', 'O', 'P', 'Q', 'R',
+		'S', 'T', 'U', 'V', 'W', 'X',
+		'Y', 'Z', 'a', 'b', 'c', 'd',
+		'e', 'f', 'g', 'h', 'i', 'j',
+		'k', 'l', 'm', 'n', 'o', 'p',
+		'q', 'r', 's', 't', 'u', 'v',
+		'w', 'x', 'y', 'x'};
+	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
+		'T', 'U', 'V', 'W', 'X', 'Y',
+		'Z', 'A', 'B', 'C', 'D', 'E',
+		'F', 'G', 'H', 'I', 'J', 'K',
+		'L', 'M', 'n', 'o', 'p', 'q',
+		'r', 's', 't', 'u', 'v', 'w',
+		'x', 'y', 'z', 'a', 'b', 'c',
+		'd', 'e', 'f', 'g', 'h', 'i',
+		'j', 'k', 'l', 'm'};
+
+	while (s[++index1])
 	{
-		for (i2 = 0; i2 <= 52; i2++)
+		for (index2 = 0; index2 < 52; index2++)
 		{
-			if (*(s + i) == alpha[i2])
+			if (s[index1] == alphabet[index2])
 			{
-				*(s + i) = alpha2[i2];
+				s[index1] = rot13key[index2];
 				break;
 			}
 		}
-		i++;
 	}
 	return (s);
 }
-
