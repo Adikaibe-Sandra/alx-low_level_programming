@@ -4,6 +4,7 @@ include < stdio.h >
 /**
  * rot13 - encodes a string using rot13
  * @s: the string targeted
+ *
  * Return: returns the encoded string
  */
 
