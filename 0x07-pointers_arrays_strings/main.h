@@ -1,12 +1,10 @@
-#include MAIN_H
+#ifndef MAIN_H
 #define MAIN_H
 
-/** File: main.h
- * Auth: Tech Sis
- * Description: Contains prototypes for all functions
+/**
+ * void prototypes()
+ * int prototypes()
  */
-
-#include <stddef.h>
 
 int _putchar(char c);
 char *_memset(char *s, char b, unsigned int n);
@@ -18,4 +16,4 @@ char *_strstr(char *haystack, char *needle);
 void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
 
-#endif
+#endif /*MAIN_H*/
