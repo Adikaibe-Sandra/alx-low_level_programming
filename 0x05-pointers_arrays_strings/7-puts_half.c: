@@ -1,0 +1,8 @@
+lf.c:24:3: error: implicit declaration of function ‘putchar’ [-Werror=implicit-function-declaration]
+
+   24 |   putchar(str[half]);
+
+      |   ^~~~~~~
+
+cc1: all warnings being treated as errors
+
