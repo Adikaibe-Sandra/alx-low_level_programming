@@ -7,7 +7,7 @@
  * @size: number of element arrays
  * @c: char
  *
- * Return: pointer
+ * Return: Null
  */
 char *create_array(unsigned int size, char c)
 {
@@ -16,13 +16,15 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 	{
-		return (Null);
+		return (NULL);
 	}
+
 	arr = malloc(sizeof(char) * size);
+
 	/* check if malloc was successful */
 
-	if (arr == Null)
-		return (Null);
+	if (arr == NULL)
+		return (NULL);
 
 	for (i = 0; i < size; i++)
 	{
