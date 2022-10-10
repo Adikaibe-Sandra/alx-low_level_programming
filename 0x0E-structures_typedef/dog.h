@@ -1,5 +1,8 @@
-#include <stdlib.h>
+#ifndef DOG_H
+#define DOG_H
 #include "dog.h"
+#include <stdlib.h>
+
 /**
  * init_dog - Initializes a variable of type dog structure
  * @d: array
@@ -22,3 +25,5 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 		d->owner = owner;
 	}
 }
+
+#endif
