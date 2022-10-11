@@ -1,11 +1,8 @@
 #ifndef DOG_H
 #define DOG_H
-#include "dog.h"
-#include <stdlib.h>
 
 /**
- * init_dog - Initializes a variable of type dog structure
- * @d: array
+ * struct dog - Initializes a variable of type dog structure
  * @name: The name of the dog.
  * @age: The age of the dog.
  * @owner: Owner
@@ -13,15 +10,20 @@
  *
  * Return: Nothing
  */
-void init_dog(struct dog *d, char *name, float age, char *owner)
+struct dog
 {
-	if (d == NULL)
-		return;
+	char *name;
+	float age;
+	char *owner;
+};
 
-	else
-	{
-		d->name = name;
-		d->age = age;
-		d->owner = owner;
-	}
-}
+/**
+ * dog_t - Typedef for struct dog
+ */
+typedef struct dog_t;
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+
+#endif
