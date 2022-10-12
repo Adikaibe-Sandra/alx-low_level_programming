@@ -11,31 +11,35 @@
  */
 int main(int argc, char *argv[])
 {
-	int a = 0, b = 0, res = 0;
-	char s;
+	int one, two, ans;
+	int (*res)(int, int);
+	char *get_op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	/* check if there is only one operator*/
-	if (argv[2][1] != '\0')
+
+	one = atoi(argv[1]);
+	two = atoi(argv[3]);
+	get_op = argv[2];
+
+	if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	s = argv[2][0];
-	if (s != '+' && s != '_' && s != '/' && s != '*' && s != '%')
+	if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '0'))
 	{
 		printf("Error\n");
-		exit(99);
+		exit(100);
 	}
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	res = (get_op_func(argv[2]))(a, b);
-	printf("%d\n", res);
+	res = get_op_func(get_op);
+	ans = res(one, two);
+
+	printf("%d\n", ans);
 	return (0);
 }
